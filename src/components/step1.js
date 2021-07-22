@@ -40,7 +40,7 @@ const StepOne = (props) => {
   );
 };
 StepOne.propTypes = {
-  firstOperend: PropTypes.number,
+  firstOperend: PropTypes.string,
   onInputChange: PropTypes.func,
   isError: PropTypes.bool,
 };

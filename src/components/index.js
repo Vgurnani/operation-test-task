@@ -30,11 +30,15 @@ const Operation = () => {
 
   const handleOperationResult = (e) => {
     e.preventDefault();
-    const operationValue = [...operations];
-    operationValue.push({ operend, operator });
-    setOperations(operationValue);
-    const resultValue = operatorResult(operator, result, operend);
-    setResult(resultValue);
+    if (operend) {
+      const operationValue = [...operations];
+      operationValue.push({ operend, operator });
+      setOperations(operationValue);
+      const resultValue = operatorResult(operator, result, operend);
+      setResult(resultValue);
+    } else {
+      setIsError(true);
+    }
   };
   const onReset = () => {
     setIsStepTwo(false);
@@ -81,6 +85,7 @@ const Operation = () => {
               onReset={onReset}
               operations={operations}
               operend={operend}
+              isError={isError}
             />
           )}
         </form>

@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import { useStyles } from "./style.js";
 import PropTypes from "prop-types";
+import { errorMessageObject } from "./helper.js";
 
 const StepTwo = (props) => {
   const classes = useStyles();
@@ -111,8 +112,9 @@ const StepTwo = (props) => {
                 type="number"
                 variant="outlined"
                 label="Operend"
+                error={props.isError && !props.operend}
                 onChange={(e) => props.onInputChange(e)}
-                value={props.operend}
+                value={props.operend || ""}
               />
             </Grid>
             <Grid item>
@@ -142,13 +144,14 @@ const StepTwo = (props) => {
   );
 };
 StepTwo.propTypes = {
-  firstOperend: PropTypes.number,
+  firstOperend: PropTypes.string,
   onInputChange: PropTypes.func,
   result: PropTypes.number,
   operator: PropTypes.string,
   handleOperatorChange: PropTypes.func,
   onReset: PropTypes.func,
   operations: PropTypes.array,
-  operend: PropTypes.number,
+  operend: PropTypes.string,
+  isError: PropTypes.bool,
 };
 export default StepTwo;

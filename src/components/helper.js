@@ -20,4 +20,5 @@ export const operatorResult = (operator, result, operent) => {
 
 export const errorMessageObject = {
   firstNumber: "Please enter first number",
+  operend: "Please enter operend",
 };
