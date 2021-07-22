@@ -42,6 +42,7 @@ const Operation = () => {
     setOperator("+");
     setOperations([]);
     setFirstOperend(null);
+    setOperend(null);
   };
 
   return (
