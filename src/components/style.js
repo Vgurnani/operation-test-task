@@ -25,11 +25,11 @@ export const useStyles = makeStyles((theme) => ({
   },
   operationFormButton: {
     width: "100%",
-    boxShadow: "none",
-    padding: "14px 30px",
-    textTransform: "capitalize",
-    fontSize: "1rem",
-    borderRadius: "4px",
+    boxShadow: "none !important",
+    padding: "14px 30px !important",
+    textTransform: "capitalize !important",
+    fontSize: "1rem !important",
+    borderRadius: "4px !important",
   },
   operationBox: {
     background: "#ecf5f7",
@@ -53,7 +53,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   mb: {
-    marginBottom: "10px",
+    marginBottom: "10px !important",
   },
   operation: {
     fontSize: "4rem",

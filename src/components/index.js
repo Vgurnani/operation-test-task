@@ -18,7 +18,7 @@ const Operation = () => {
     e.preventDefault();
     if (firstOperend) {
       setIsStepTwo(true);
-      setResult(firstOperend);
+      setResult(Number(firstOperend));
     } else {
       setIsError(true);
     }

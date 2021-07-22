@@ -11,7 +11,6 @@ import {
 } from "@material-ui/core";
 import { useStyles } from "./style.js";
 import PropTypes from "prop-types";
-import { errorMessageObject } from "./helper.js";
 
 const StepTwo = (props) => {
   const classes = useStyles();
